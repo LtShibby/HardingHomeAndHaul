@@ -61,19 +61,29 @@
 
     <!-- Service Area Section -->
     <section class="py-12 sm:py-16 md:py-20 bg-tampa-light-blue">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 sm:mb-8">Service Area</h2>
-        <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
-          Proudly serving {{ site.areas.join(', ') }} and surrounding areas
-        </p>
-        <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
-          <span 
-            v-for="area in site.areas" 
-            :key="area"
-            class="bg-white text-tampa-blue px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium shadow-md"
-          >
-            {{ area }}
-          </span>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8 sm:mb-12">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-6">Service Area</h2>
+          <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8">
+            Proudly serving {{ site.areas.join(', ') }} and surrounding areas
+          </p>
+          <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+            <span 
+              v-for="area in site.areas" 
+              :key="area"
+              class="bg-white text-tampa-blue px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium shadow-md"
+            >
+              {{ area }}
+            </span>
+          </div>
+        </div>
+        
+        <!-- Service Area Map -->
+        <div class="max-w-4xl mx-auto">
+          <ServiceAreaMap />
+          <p class="text-center text-sm text-gray-600 mt-4">
+            We provide services within a 25-mile radius of Tampa, FL
+          </p>
         </div>
       </div>
     </section>
@@ -85,6 +95,7 @@ import { computed } from 'vue'
 import { site } from '../config/site.js'
 import HeroIllustration from '../components/HeroIllustration.vue'
 import ServiceCard from '../components/ServiceCard.vue'
+import ServiceAreaMap from '../components/ServiceAreaMap.vue'
 
 const featuredServices = computed(() => site.services.slice(0, 3))
 </script>
