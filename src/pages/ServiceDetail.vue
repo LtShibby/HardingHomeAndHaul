@@ -34,7 +34,7 @@
                 </li>
               </ul>
             </div>
-            <div>
+            <!-- <div>
               <h2 class="text-3xl font-bold text-gray-800 mb-6">Service Gallery</h2>
               <div class="grid grid-cols-2 gap-4">
                 <div v-for="i in 4" :key="i" class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
@@ -43,7 +43,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>

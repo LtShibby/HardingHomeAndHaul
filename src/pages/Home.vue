@@ -82,7 +82,13 @@
         <div class="max-w-4xl mx-auto">
           <ServiceAreaMap />
           <p class="text-center text-sm text-gray-600 mt-4">
-            We provide services within a 25-mile radius of Tampa, FL
+            We provide services within the service areas listed above.
+          </p>
+          <p class="text-center text-sm text-gray-600 mt-4">
+            This may include some surrounding areas.
+          </p>
+          <p class="text-center text-sm text-gray-600 mt-4">
+            If outside the service areas, please contact us to see if we can help.
           </p>
         </div>
       </div>

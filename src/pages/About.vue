@@ -29,15 +29,17 @@
             </p>
           </div>
           <div class="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
-            <div class="h-96 bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-              <i class="fas fa-image text-6xl text-gray-500" aria-hidden="true"></i>
-            </div>
+            <img 
+              src="/src/assets/OurStory.png" 
+              alt="Our Story - Harding Home & Haul Services team at work"
+              class="h-96 w-full object-cover"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- Stats Section
     <section class="py-20 bg-tampa-light-blue">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
@@ -50,10 +52,10 @@
           :stat3="{ value: '24/7', label: 'Available Service' }"
         />
       </div>
-    </section>
+    </section> -->
 
     <!-- Values Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-tampa-light-blue">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Values</h2>
@@ -85,20 +87,26 @@
       </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Meet the Owner Section -->
     <section class="py-20 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-gray-800 mb-4">Meet Our Team</h2>
-          <p class="text-xl text-gray-600">The people behind the service</p>
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Meet the Owner</h2>
+          <p class="text-xl text-gray-600">The person behind the service</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div v-for="i in 3" :key="i" class="text-center">
-            <div class="bg-gray-200 rounded-full w-32 h-32 mx-auto mb-4 flex items-center justify-center">
-              <i class="fas fa-user text-4xl text-gray-500" aria-hidden="true"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Team Member {{ i }}</h3>
-            <p class="text-gray-600">Professional, reliable, and dedicated to quality service</p>
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="flex-shrink-0">
+            <img 
+              src="/src/assets/AshtonHeadshot.png" 
+              alt="Ashton - Owner of Harding Home & Haul Services"
+              class="w-64 h-64 rounded-full object-cover shadow-lg mx-auto"
+            />
+          </div>
+          <div class="text-center lg:text-left">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Ashton</h3>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              Ashton, Florida native, U.S. Army veteran, and owner of Harding Home & Haul.
+            </p>
           </div>
         </div>
       </div>

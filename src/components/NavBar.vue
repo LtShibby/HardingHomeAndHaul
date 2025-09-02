@@ -32,13 +32,13 @@
             >
               About
             </router-link>
-            <router-link 
+            <!-- <router-link 
               to="/gallery" 
               class="nav-link"
               :class="{ 'text-tampa-blue': $route.name === 'Gallery' }"
             >
               Gallery
-            </router-link>
+            </router-link> -->
             <router-link 
               to="/contact" 
               class="nav-link"
@@ -90,13 +90,13 @@
         >
           About
         </router-link>
-        <router-link 
+        <!-- <router-link 
           to="/gallery" 
           class="mobile-nav-link"
           @click="closeMobileMenu"
         >
           Gallery
-        </router-link>
+        </router-link> -->
         <router-link 
           to="/contact" 
           class="mobile-nav-link"
