@@ -65,7 +65,10 @@
           <div>
             <h5 class="font-semibold mb-2">Service Areas:</h5>
             <p class="text-gray-300 mb-2">
-              {{ site.areas.join(', ') }}
+              Tampa and surrounding areas. 
+            </p>
+            <p class="text-gray-300 mb-2">
+              Check out our service area map by clicking the link below!
             </p>
             <router-link 
               to="/#service-area" 
