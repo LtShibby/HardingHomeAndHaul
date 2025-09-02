@@ -39,46 +39,60 @@
   let cityMarkers = []
   
   const fallbackAreas = [
-    'Tampa', 'St. Petersburg', 'Clearwater', 'Brandon',
-    'Riverview', 'Wesley Chapel', 'Largo', 'Palm Harbor'
-  ]
-  
-  // Tampa Bay service polygon (outer hull, clockwise)
-  const SERVICE_POLYGON_PATH = [
-    // Pasco / Pinellas north
-    { lat: 28.1461, lng: -82.7568 }, // Tarpon Springs
-    { lat: 28.1150, lng: -82.7000 }, // East Lake / Keystone
-    { lat: 28.1900, lng: -82.5900 }, // Odessa
-    { lat: 28.2397, lng: -82.3279 }, // Wesley Chapel
-    { lat: 28.1200, lng: -82.2500 }, // Thonotosassa east
-    // Hillsborough east/south
-    { lat: 27.9831, lng: -82.2753 }, // Seffner
-    { lat: 27.9378, lng: -82.2859 }, // Brandon
-    { lat: 27.8661, lng: -82.3265 }, // Riverview
-    { lat: 27.7731, lng: -82.4070 }, // Apollo Beach
-    { lat: 27.7209, lng: -82.4335 }, // Ruskin
-    // Manatee north / Skyway
-    { lat: 27.6000, lng: -82.5600 }, // Terra Ceia / Palmetto edge
-    { lat: 27.6376, lng: -82.6430 }, // Skyway north/east
-    // Pinellas west/south
-    { lat: 27.6769, lng: -82.7370 }, // St. Pete south
-    { lat: 27.7300, lng: -82.7600 }, // Gulfport
-    { lat: 27.8000, lng: -82.8000 }, // St. Pete beaches
-    { lat: 27.9098, lng: -82.7884 }, // Largo
-    { lat: 27.9659, lng: -82.8001 }, // Clearwater
-    { lat: 28.0836, lng: -82.7530 }, // Palm Harbor
-    { lat: 28.1461, lng: -82.7568 }  // back to Tarpon Springs
-  ]
-  
-  // Optional city points
-  const CITIES = [
-    { name: 'Tampa',          lat: 27.9506, lng: -82.4572 },
-    { name: 'St. Petersburg', lat: 27.7676, lng: -82.6403 },
-    { name: 'Clearwater',     lat: 27.9659, lng: -82.8001 },
-    { name: 'Brandon',        lat: 27.9378, lng: -82.2859 },
-    { name: 'Riverview',      lat: 27.8661, lng: -82.3265 },
-    { name: 'Wesley Chapel',  lat: 28.2397, lng: -82.3279 }
-  ]
+  'Tampa', 'St. Petersburg', 'Clearwater', 'Brandon',
+  'Riverview', 'Wesley Chapel', 'Largo', 'Palm Harbor',
+  'New Port Richey', 'Hudson', 'Spring Hill', 'Brooksville'
+]
+
+// Tampa Bay + Pasco + Hernando service polygon (outer hull, clockwise)
+const SERVICE_POLYGON_PATH = [
+  // Hernando north edge (Spring Hill / Brooksville / Weeki Wachee)
+  { lat: 28.55, lng: -82.75 },  // Weeki Wachee (Gulf coast)
+  { lat: 28.55, lng: -82.40 },  // Brooksville east
+
+  // Pasco east side
+  { lat: 28.33, lng: -82.20 },  // Dade City area
+  { lat: 28.12, lng: -82.20 },  // Thonotosassa east (already had, keep lower)
+
+  // Hillsborough south
+  { lat: 27.98, lng: -82.27 },  // Seffner
+  { lat: 27.94, lng: -82.29 },  // Brandon
+  { lat: 27.87, lng: -82.33 },  // Riverview
+  { lat: 27.77, lng: -82.41 },  // Apollo Beach
+  { lat: 27.72, lng: -82.43 },  // Ruskin
+
+  // Manatee north / Skyway
+  { lat: 27.60, lng: -82.56 },  // Terra Ceia / Palmetto edge
+  { lat: 27.64, lng: -82.64 },  // Skyway north/east
+
+  // Pinellas south/west
+  { lat: 27.68, lng: -82.85 },  // St. Pete south
+  { lat: 27.73, lng: -82.85 },  // Gulfport
+  { lat: 27.80, lng: -82.85 },  // St. Pete Beach
+  { lat: 27.91, lng: -82.85 },  // Largo
+  { lat: 27.97, lng: -82.85 },  // Clearwater
+  { lat: 28.08, lng: -82.85 },  // Palm Harbor
+  { lat: 28.15, lng: -82.85 },  // Tarpon Springs
+
+  // Pasco coast (Holiday / New Port Richey / Hudson)
+  { lat: 28.22, lng: -82.85 },  // New Port Richey
+  { lat: 28.38, lng: -82.85 },  // Hudson
+  { lat: 28.55, lng: -82.85 }   // close loop back at Weeki Wachee
+]
+
+// Optional city points
+const CITIES = [
+  { name: 'Tampa',          lat: 27.9506, lng: -82.4572 },
+  { name: 'St. Petersburg', lat: 27.7676, lng: -82.6403 },
+  { name: 'Clearwater',     lat: 27.9659, lng: -82.8001 },
+  { name: 'Brandon',        lat: 27.9378, lng: -82.2859 },
+  { name: 'Riverview',      lat: 27.8661, lng: -82.3265 },
+  { name: 'Wesley Chapel',  lat: 28.2397, lng: -82.3279 },
+  { name: 'New Port Richey',lat: 28.2449, lng: -82.7193 },
+  { name: 'Spring Hill',    lat: 28.4789, lng: -82.5307 },
+  { name: 'Brooksville',    lat: 28.5553, lng: -82.3879 }
+]
+
   
   onMounted(() => {
     if (!mapEl.value) return
