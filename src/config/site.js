@@ -6,7 +6,7 @@ export const site = {
   smsHref: "sms:3528034809",
   email: "HardingHomeAndHaul@gmail.com",
   city: "Tampa, FL",
-  areas: ["Tampa", "Brandon", "Ybor", "Seminole Heights", "Riverview"],
+  areas: ["Tampa", "St. Petersburg", "Clearwater", "Brandon", "Riverview", "Wesley Chapel", "New Port Richey", "Spring Hill", "Brooksville", "Ybor City", "Seminole Heights"],
   tagline: "From your home to our haul — we get it done.",
   social: { 
     facebook: "https://www.facebook.com/ashton.harding.33", 

@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-lg border border-gray-200">
+    <div class="w-full h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden shadow-lg border border-gray-200 relative" style="z-index: 1;">
       <!-- Fallback before Leaflet mounts -->
       <div v-if="!mapLoaded" class="w-full h-full bg-gradient-to-br from-tampa-light-blue to-tampa-light-green flex items-center justify-center">
         <div class="text-center p-6">
@@ -105,6 +105,12 @@ const CITIES = [
       wheelDebounceTime: 40,
       worldCopyJump: true
     })
+
+    // Fix z-index issues by setting map container z-index
+    const mapContainer = mapInstance.getContainer()
+    if (mapContainer) {
+      mapContainer.style.zIndex = '1'
+    }
   
     // Basemap — OSM tiles (free, but use your own provider for prod traffic)
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -143,6 +149,21 @@ const CITIES = [
       return m
     })
   
+    // Fix z-index on all Leaflet elements
+    setTimeout(() => {
+      const mapContainer = mapInstance.getContainer()
+      if (mapContainer) {
+        mapContainer.style.zIndex = '1'
+        // Fix all child elements
+        const allElements = mapContainer.querySelectorAll('*')
+        allElements.forEach(el => {
+          if (el.style.zIndex && parseInt(el.style.zIndex) > 50) {
+            el.style.zIndex = '10'
+          }
+        })
+      }
+    }, 100)
+
     mapLoaded.value = true
   })
   
@@ -163,6 +184,32 @@ const CITIES = [
   }
   .leaflet-control-zoom a + a {
     margin-top: 0.25rem;
+  }
+  
+  /* Aggressive z-index fixes - ensure map doesn't overlay navbar */
+  .leaflet-container {
+    z-index: 1 !important;
+  }
+  .leaflet-control-container {
+    z-index: 10 !important;
+  }
+  .leaflet-popup {
+    z-index: 20 !important;
+  }
+  .leaflet-tooltip {
+    z-index: 15 !important;
+  }
+  .leaflet-zoom-box {
+    z-index: 5 !important;
+  }
+  .leaflet-marker-pane {
+    z-index: 5 !important;
+  }
+  .leaflet-overlay-pane {
+    z-index: 2 !important;
+  }
+  .leaflet-tile-pane {
+    z-index: 1 !important;
   }
   </style>
   

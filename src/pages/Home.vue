@@ -60,7 +60,7 @@
     </section>
 
     <!-- Service Area Section -->
-    <section class="py-12 sm:py-16 md:py-20 bg-tampa-light-blue">
+    <section id="service-area" class="py-12 sm:py-16 md:py-20 bg-tampa-light-blue">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-8 sm:mb-12">
           <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-6">Service Area</h2>

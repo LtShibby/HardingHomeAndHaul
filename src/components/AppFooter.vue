@@ -64,9 +64,15 @@
           </div>
           <div>
             <h5 class="font-semibold mb-2">Service Areas:</h5>
-            <p class="text-gray-300">
+            <p class="text-gray-300 mb-2">
               {{ site.areas.join(', ') }}
             </p>
+            <router-link 
+              to="/#service-area" 
+              class="text-tampa-blue hover:text-tampa-green transition-colors text-sm"
+            >
+              View Service Area Map →
+            </router-link>
           </div>
         </div>
       </div>

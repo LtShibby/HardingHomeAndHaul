@@ -98,14 +98,14 @@
           <div class="flex-shrink-0">
             <img 
               src="/src/assets/AshtonHeadshot.png" 
-              alt="Ashton - Owner of Harding Home & Haul Services"
+              alt="Ashton Harding - Owner of Harding Home & Haul Services"
               class="w-64 h-64 rounded-full object-cover shadow-lg mx-auto"
             />
           </div>
           <div class="text-center lg:text-left">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Ashton</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Ashton Harding</h3>
             <p class="text-lg text-gray-700 leading-relaxed">
-              Ashton, Florida native, U.S. Army veteran, and owner of Harding Home & Haul.
+              Ashton is a Florida native, U.S. Army veteran, and owner of Harding Home & Haul.
             </p>
           </div>
         </div>
