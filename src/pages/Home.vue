@@ -1,28 +1,7 @@
 <template>
   <div class="pt-16">
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-tampa-light-blue to-tampa-light-green min-h-screen flex items-center">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="text-center">
-          <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
-            {{ site.name }}
-          </h1>
-          <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            {{ site.tagline }}
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a :href="site.smsHref" class="btn-primary">
-              <i class="fas fa-mobile-alt mr-2" aria-hidden="true"></i>
-              Text for Free Estimate
-            </a>
-            <a :href="site.phoneHref" class="btn-secondary">
-              <i class="fas fa-phone mr-2" aria-hidden="true"></i>
-              Call Now
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <HeroIllustration />
 
     <!-- Why Choose Us Section -->
     <section class="py-20 bg-gray-50">
@@ -104,6 +83,7 @@
 <script setup>
 import { computed } from 'vue'
 import { site } from '../config/site.js'
+import HeroIllustration from '../components/HeroIllustration.vue'
 import ServiceCard from '../components/ServiceCard.vue'
 
 const featuredServices = computed(() => site.services.slice(0, 3))

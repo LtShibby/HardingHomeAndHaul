@@ -17,9 +17,10 @@ A production-ready multi-page website built with Vue 3, Vue Router, and Tailwind
 
 ```
 src/
-├── components/          # Reusable components
-│   ├── NavBar.vue      # Navigation with mobile menu
+├── components/         # Reusable components
 │   ├── AppFooter.vue   # Footer with contact info
+│   ├── Hero.vue        # Hero section with svg styled imagery
+│   ├── NavBar.vue      # Navigation with mobile menu
 │   ├── ServiceCard.vue # Service display card
 │   ├── StatBar.vue     # Statistics display
 │   └── ReviewCard.vue  # Customer review card
