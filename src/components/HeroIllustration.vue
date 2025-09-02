@@ -7,21 +7,21 @@
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.06)_1px,transparent_1px)] [background-size:20px_20px]"></div>
     </div>
 
-    <div class="relative mx-auto max-w-7xl px-6 py-24 md:py-28">
-      <div class="grid items-center gap-10 md:grid-cols-2">
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-20 md:py-24 lg:py-28">
+      <div class="grid items-center gap-8 sm:gap-10 md:grid-cols-2">
         <!-- Text / CTA -->
         <div class="text-center md:text-left">
-          <h1 id="hero-heading" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 id="hero-heading" class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-gray-900">
             {{ site.name }}
           </h1>
-          <p class="mt-4 text-lg text-gray-600">
+          <p class="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600">
             {{ site.tagline }}
           </p>
 
-          <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row md:justify-start">
+          <div class="mt-6 sm:mt-8 flex flex-col items-center gap-3 sm:flex-row md:justify-start">
             <a
               :href="site.smsHref"
-              class="group inline-flex items-center justify-center rounded-xl bg-tampa-blue px-6 py-3 text-base font-semibold text-white shadow-lg shadow-tampa-blue/25 transition hover:scale-[1.02] hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              class="group inline-flex items-center justify-center rounded-xl bg-tampa-blue px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-white shadow-lg shadow-tampa-blue/25 transition hover:scale-[1.02] hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               aria-label="Text for a free estimate"
             >
               <svg class="mr-2 h-5 w-5 transition group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -31,7 +31,7 @@
             </a>
             <a
               :href="site.phoneHref"
-              class="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-6 py-3 text-base font-semibold text-gray-900 shadow-sm transition hover:scale-[1.02] hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400"
+              class="inline-flex items-center justify-center rounded-xl border border-gray-300 bg-white px-5 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-gray-900 shadow-sm transition hover:scale-[1.02] hover:border-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400"
               aria-label="Call now"
             >
               <svg class="mr-2 h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -41,7 +41,7 @@
             </a>
           </div>
 
-          <p class="mt-6 text-sm text-gray-500">
+          <p class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-500">
             Serving {{ site.areas.join(', ') }} — {{ site.city }}
           </p>
         </div>

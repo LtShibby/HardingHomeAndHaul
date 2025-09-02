@@ -1,19 +1,19 @@
 <template>
   <div class="pt-16">
     <!-- Services Header -->
-    <section class="py-20 bg-gradient-to-br from-tampa-light-blue to-tampa-light-green">
+    <section class="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-tampa-light-blue to-tampa-light-green">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Our Services</h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">Our Services</h1>
+        <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
           Professional, reliable, and affordable solutions for all your home and hauling needs
         </p>
       </div>
     </section>
 
     <!-- Services Grid -->
-    <section class="py-20 bg-white">
+    <section class="py-12 sm:py-16 md:py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           <ServiceCard 
             v-for="(service, index) in site.services" 
             :key="service.slug"
@@ -25,16 +25,16 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-12 sm:py-16 md:py-20 bg-gray-50">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
-          <p class="text-xl text-gray-600">Common questions about our services</p>
+        <div class="text-center mb-12 sm:mb-16">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">Frequently Asked Questions</h2>
+          <p class="text-base sm:text-lg md:text-xl text-gray-600">Common questions about our services</p>
         </div>
         <div class="space-y-6">
           <div v-for="faq in faqs" :key="faq.question" class="card">
-            <h3 class="text-xl font-semibold text-gray-800 mb-3">{{ faq.question }}</h3>
-            <p class="text-gray-600">{{ faq.answer }}</p>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-800 mb-3">{{ faq.question }}</h3>
+            <p class="text-sm sm:text-base text-gray-600">{{ faq.answer }}</p>
           </div>
         </div>
       </div>

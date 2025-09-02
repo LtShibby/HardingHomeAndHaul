@@ -9,8 +9,8 @@ export const site = {
   areas: ["Tampa", "Brandon", "Ybor", "Seminole Heights", "Riverview"],
   tagline: "From your home to our haul — we get it done.",
   social: { 
-    facebook: "#", 
-    instagram: "#"  
+    facebook: "https://www.facebook.com/ashton.harding.33", 
+    instagram: "https://www.instagram.com/ashton_h187/#"  
   },
   services: [
     {

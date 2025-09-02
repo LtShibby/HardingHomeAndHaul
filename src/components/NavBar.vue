@@ -53,10 +53,14 @@
         <div class="md:hidden">
           <button 
             @click="toggleMobileMenu"
-            class="text-gray-700 hover:text-tampa-blue focus:outline-none"
+            class="text-gray-700 hover:text-tampa-blue focus:outline-none p-2"
             aria-label="Toggle mobile menu"
           >
-            <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
           </button>
         </div>
       </div>
